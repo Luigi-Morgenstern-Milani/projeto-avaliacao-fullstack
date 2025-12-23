@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const data = await response.json();
 
-      // 🔐 SALVA TOKEN CORRETAMENTE
+   
       localStorage.setItem("accessToken", data.accessToken);
 
-      // ➡️ VAI PARA CLIENTES
+  
       window.location.href = "clientes.html";
 
     } catch (err) {
