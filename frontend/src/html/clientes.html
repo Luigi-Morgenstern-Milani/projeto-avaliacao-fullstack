@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD de Clientes</title>
+</head>
+
+<body>
+
+<h1>CRUD de Clientes</h1>
+
+<h2>Cadastrar / Atualizar Cliente</h2>
+
+<form id="formCliente">
+    <input type="hidden" id="id">
+
+    <label>Nome</label><br>
+    <input type="text" id="nome" required><br><br>
+
+    <label>CPF</label><br>
+    <input type="text" id="cpf" required><br><br>
+
+    <label>Logradouro</label><br>
+    <input type="text" id="logradouro"><br><br>
+
+    <label>Bairro</label><br>
+    <input type="text" id="bairro"><br><br>
+
+    <label>Cidade</label><br>
+    <input type="text" id="cidade"><br><br>
+
+    <label>Estado</label><br>
+    <input type="text" id="estado"><br><br>
+
+    <label>CEP</label><br>
+    <input type="text" id="cep"><br><br>
+
+    <button type="submit">Salvar</button>
+    <button type="reset" onclick="limparFormulario()">Limpar</button>
+</form>
+
+<hr>
+
+<h2 id="tituloLista">Lista de Clientes</h2>
+
+<button onclick="listarClientes()">Atualizar Lista</button>
+
+<table border="1" width="100%">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Logradouro</th>
+            <th>Bairro</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+            <th>CEP</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody id="tabelaClientes"></tbody>
+</table>
+
+<script src="../javascript/clientes.js"></script>
+</body>
+</html>

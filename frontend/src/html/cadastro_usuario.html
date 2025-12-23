@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Cadastro de Usuário</title>
+</head>
+
+<body>
+
+<header>
+    <a href="login.html">Ir para Login</a>
+</header>
+
+<h1>Cadastro de Usuário</h1>
+
+<div class="conteiner">
+    <form id="form_cadastro_usuario" method="post">
+        <h3>Preencha todos os campos obrigatórios</h3>
+
+        Nome completo<br>
+        <input
+            type="text"
+            id="nome"
+            placeholder="Digite seu nome completo"
+            required
+        /><br><br>
+
+        E-mail<br>
+        <input
+            type="email"
+            id="email"
+            placeholder="Digite seu e-mail"
+            required
+        /><br><br>
+
+    
+
+        Senha<br>
+        <input
+            type="password"
+            id="senha"
+            placeholder="Digite sua senha"
+            required
+        /><br><br>
+
+        <input type="submit" value="Cadastrar" />
+        <input type="reset" value="Limpar" />
+    </form>
+
+    <div id="alerta" aria-live="polite"></div>
+</div>
+
+<script src="../javascript/cadastro_usuario.js"></script>
+
+</body>
+</html>
