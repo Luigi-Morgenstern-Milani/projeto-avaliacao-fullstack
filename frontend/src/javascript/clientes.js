@@ -1,15 +1,14 @@
 const API_URL = "http://localhost:8081/clientes";
 
-// 🔐 TOKEN PADRÃO
+
 const token = localStorage.getItem("accessToken");
 
-// 🚫 BLOQUEIA SE NÃO ESTIVER LOGADO
 if (!token) {
   alert("Você precisa estar logado");
   window.location.href = "login.html";
 }
 
-// 🔄 AO CARREGAR PÁGINA
+
 document.addEventListener("DOMContentLoaded", () => {
   listarClientes();
 
@@ -54,14 +53,14 @@ async function salvarCliente(e) {
   limparFormulario();
   await listarClientes();
 
-  // Rola até a lista
+
   const tituloLista = document.getElementById("tituloLista");
   if (tituloLista) {
     tituloLista.scrollIntoView({ behavior: "smooth" });
   }
 }
 
-// 📄 LISTAR
+
 async function listarClientes() {
   const response = await fetch(API_URL, {
     headers: {
@@ -100,7 +99,7 @@ async function listarClientes() {
   });
 }
 
-// ✏️ EDITAR
+
 async function editarCliente(id) {
   const response = await fetch(`${API_URL}/${id}`, {
     headers: {
@@ -120,7 +119,7 @@ async function editarCliente(id) {
   document.getElementById("cep").value = c.cep || "";
 }
 
-// ❌ DELETAR
+
 async function deletarCliente(id) {
   if (!confirm("Deseja excluir?")) return;
 
@@ -134,7 +133,7 @@ async function deletarCliente(id) {
   listarClientes();
 }
 
-// 🧹 LIMPAR
+
 function limparFormulario() {
   document.getElementById("formCliente").reset();
   document.getElementById("id").value = "";
