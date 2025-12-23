@@ -50,7 +50,7 @@ public class SecurityConfig {
                 .build();
     }
 
-    // ✅ ESSENCIAL para login funcionar
+ 
     @Bean
     public AuthenticationManager authenticationManager(
             AuthenticationConfiguration authenticationConfiguration
@@ -63,7 +63,7 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    // ✅ CORS para frontend separado
+    
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
