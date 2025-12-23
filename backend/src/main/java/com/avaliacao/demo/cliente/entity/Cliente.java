@@ -16,7 +16,7 @@ public class Cliente {
     @Column(nullable = false, unique = true, length = 11)
     private String cpf;
 
-    // Endereço
+   
     private String logradouro;
     private String bairro;
     private String cidade;
