@@ -1,1 +1,0 @@
-# projeto-avaliacao-fullstack
